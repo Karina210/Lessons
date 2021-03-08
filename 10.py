@@ -72,6 +72,40 @@ def main():
     # file_out.write(file_in.read())
 
 
+# JSON
+# (закинет словарь в файл)
+# import json
+# with open('files/file.txt', 'w') as my_file:
+#  data = json.dumps({'a': 5, 'hbj':3})
+#  my_file.write(data)
+
+
+# выведет содержимое с файла
+# with open('files/file.txt') as my_file:
+ # data = json.loads(my_file.read())
+ # print(data)
+
+
+# 10.07 не получилось
+# import json
+# from random import randint as get_rand
+# with open('files/file.txt', 'w') as my_file:
+#   def create_matrix(x, y):
+#     rows = []
+#     for _ in range(x):
+#         tmp = []
+#         for _ in range(y):
+#             tmp.append(get_rand(0, 10))
+#         rows.append(tmp)
+#
+#     return rows
+# c = json.dumps((create_matrix(5, 2)))
+# my_file.write(c)
+
+
+
+
+
 
 if __name__ == '__main__':
     main()

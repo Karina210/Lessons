@@ -1,3 +1,4 @@
+
 # from functools import reduce
 
 # фильтрует сначала все числа и выбирает кратные 3, а потом перемножает их
@@ -30,22 +31,63 @@ c = lambda x: [b(name) for name in x]
 
 
 
-
+# выведет it is my code, hello jfj, your
 # def a(func):
-#     def wrap():
+#     def wrap(n):
 #       print('it is my code')
-#       func()
+#       func(n)
+#       print('your')
 #     return wrap
 # @a
-# def h():
-#     print('hello')
-# @a
-# def b():
-#     print('bye')
+# def h(n):
+#     print('hello', n)
+#
+#
+# h("jfj")
 
-# decorator_h = a(h)
-# decorator_h()
 
-# h()
-# b()
+# выведет hello, bob, bye
+# def my_decorator(func):
+#  def do_some_staff(n):
+#    print("hello")
+#    result = func(n)
+#    print("bye")
+#    return result
+#  return do_some_staff
+#
+# @my_decorator
+# def my_func(n):
+#     print(n)
+#     pass
+#
+#
+# my_func("bob")
+
+
+# декоратор, который выводит время выполнения функции
+# import time
+# def calc_time(func):
+#      def wrap(*args, **kwargs):
+#         start_at = time.time()
+#         res = func(*args, **kwargs)
+#         end_at = time.time()
+#         print(f'{end_at - start_at}')
+#         return res
+#      return wrap
+#
+# @calc_time
+# def long(n):
+#    for _ in range(n):
+#       pass
+#
+#
+# @calc_time
+# def short(n, x):
+#     for _ in range(n, x):
+#         pass
+#
+# long(100600 * 1000)
+# short(1, x=100)
+
+
 
