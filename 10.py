@@ -1,4 +1,5 @@
-def main():
+
+# def main():
 # Работа с файлами
 #    file = open("files/file.txt") #относительный путь, если написать ./file.txt, но он равен и file.txt
 #    print(file)
@@ -59,9 +60,9 @@ def main():
 
 
     # перезапись с 1 файла во второй
-    file_in = open("files/file.txt", 'r')
-    file_out = open("files/file2.txt", 'w')
-    file_out.write(file_in.read())
+    # file_in = open("files/file.txt", 'r')
+    # file_out = open("files/file2.txt", 'w')
+    # file_out.write(file_in.read())
 
 
     # 10.04 но не получилось
@@ -86,29 +87,79 @@ def main():
  # print(data)
 
 
-# 10.07 не получилось
-# import json
-# from random import randint as get_rand
-# with open('files/file.txt', 'w') as my_file:
-#   def create_matrix(x, y):
-#     rows = []
-#     for _ in range(x):
-#         tmp = []
-#         for _ in range(y):
-#             tmp.append(get_rand(0, 10))
-#         rows.append(tmp)
+#c одного файла все перезапишет в другой и заменит 1 на 0 и наоборот
+# def task():
+#     with open('files/file2.txt') as my_file:
+#         with open("files/files3.txt", "w") as my_file2:
+#           for line in my_file.readlines():
+#               print(f"devore {line}")
+#               edited = line.replace("0", "@").replace("1", "0").replace("@", "1")
+#               print(f"after {line}")
 #
-#     return rows
-# c = json.dumps((create_matrix(5, 2)))
-# my_file.write(c)
+#               my_file2.write(edited)
 
 
 
 
+
+
+# с одного файла перепишет в другой четные строки, а во второй нечетные
+# def task2():
+#     with open('files/file.txt') as my_file:
+#         even = open("files/files4.txt", "w")
+#         odd = open("files/files5.txt", "w")
+#
+#         for index, line in enumerate(my_file.readlines()):
+#             diff = (index + 1) % 2
+#             if diff == 0:
+#                 even.write(line)
+#             else:
+#                 odd.write(line)
+#
+#         even.close()
+#         odd.close()
+
+
+ # надо разобрать, тк очень часто нужен будет и true в нем пишется с маленькой буквы
+ #запишется в json файл
+# import json
+# def json_01():
+#     with open('files/json.json', 'w') as my_file:
+#         data = json.dumps({"name": "Ilya", "age": 25})
+#         print(data)
+#         my_file.write(data)
+
+#создали матрицу случайных чисел и сохранили ее в новом файле. После прочли ее, все четные элементы заменили на 0 и сохранили в другой файл
+# import json
+# from random import randint
+# def task10_07():
+#     def create_matrix(n):
+#         matrix = []
+#         for _ in range(n):
+#             row = []
+#             for _ in range(n):
+#                 row.append(randint(1, 10))
+#             matrix.append(row)
+#         return matrix
+#
+#     with open("files/matrix.json", "w") as file:
+#         matrix = create_matrix(4)
+#         file.write(json.dumps({"matrix": matrix}))
+#
+#     with open("files/matrix.json") as file:
+#         data = json.loads(file.read())
+#         loaded_matrix = data["matrix"]
+#
+#         for parentIndex, rows in enumerate(loaded_matrix):
+#             for valueIndex, value in enumerate(rows):
+#                 if value % 2 == 0:
+#                     loaded_matrix[parentIndex][valueIndex] = 0
+#
+#         print(loaded_matrix)
 
 
 if __name__ == '__main__':
-    main()
+    task10_07()
 
 
 
