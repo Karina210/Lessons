@@ -1,37 +1,37 @@
 
 # def main():
 # Работа с файлами
-#    file = open("files/file.txt") #относительный путь, если написать ./file.txt, но он равен и file.txt
-#    print(file)
-#    file.close() #закрывать надо после себя
+#    matrix = open("files/matrix.txt") #относительный путь, если написать ./matrix.txt, но он равен и matrix.txt
+#    print(matrix)
+#    matrix.close() #закрывать надо после себя
 
 
 #Вывод содержимого файла
-   # file = open("files/file.txt")
-   # print(file.readlines())
-   # file.close()
+   # matrix = open("files/matrix.txt")
+   # print(matrix.readlines())
+   # matrix.close()
 
 # Построчное чтение (выведет все с файла на в отдельных строках)
-#     file = open('files/file.txt')
+#     matrix = open('files/matrix.txt')
 #     while True:
-#         line = file.readline()
+#         line = matrix.readline()
 #         if not line:
 #             break
 #         print(line)
-#     file.close()
+#     matrix.close()
 
 
 # вывести:
-#     file = open("files/file.txt")
+#     matrix = open("files/matrix.txt")
 #     lines = []
 #     while True:
-#         line = file.readline()
+#         line = matrix.readline()
 #         if not line:
 #             break
 #         lines.append(line)
 #
 #
-#     file.close()
+#     matrix.close()
 #
 #     print(lines[1]) #Первую строку
 #     print(lines[-1])  #Последнюю строку
@@ -40,35 +40,35 @@
 
 
 # Чтение всех строк файлов
-#     file = open("files/file.txt")
-#     print(file.readlines())
+#     matrix = open("files/matrix.txt")
+#     print(matrix.readlines())
 
 
 #Чтение всех строк файла с помощью with
-    # with open("files/file.txt") as file:
-    #     for line in file.readlines():
+    # with open("files/matrix.txt") as matrix:
+    #     for line in matrix.readlines():
     #         print(line)
 
 #запись в файл в конце файла. Можно записать и список (['fghf\n', 'jfndf'])
-    # with open("files/file.txt", "a") as file:
-    #     file.writelines(['\nquertn\n', 'fhv'])
+    # with open("files/matrix.txt", "a") as matrix:
+    #     matrix.writelines(['\nquertn\n', 'fhv'])
 
 
     # Запись в файл в начало(заменяет все на то, что написано тут)
-    # with open("files/file.txt", "w") as file:
-    #  file.writelines(['\nquertn\n', 'fhv'])
+    # with open("files/matrix.txt", "w") as matrix:
+    #  matrix.writelines(['\nquertn\n', 'fhv'])
 
 
     # перезапись с 1 файла во второй
-    # file_in = open("files/file.txt", 'r')
+    # file_in = open("files/matrix.txt", 'r')
     # file_out = open("files/file2.txt", 'w')
     # file_out.write(file_in.read())
 
 
     # 10.04 но не получилось
-    # file_in = open("files/file.txt")
+    # file_in = open("files/matrix.txt")
     # res_a = file_in.replace(0, 1)
-    # file_in = open("files/file.txt", 'r')
+    # file_in = open("files/matrix.txt", 'r')
     # file_out = open("files/file2.txt", 'w')
     # file_out.write(file_in.read())
 
@@ -91,7 +91,7 @@
 
 # с одного файла перепишет в другой четные строки, а во второй нечетные
 # def task2():
-#     with open('files/file.txt') as my_file:
+#     with open('files/matrix.txt') as my_file:
 #         even = open("files/files4.txt", "w")
 #         odd = open("files/files5.txt", "w")
 #

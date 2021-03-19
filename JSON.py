@@ -1,13 +1,13 @@
 # JSON
 # (закинет словарь в файл)
 # import json
-# with open('files/file.txt', 'w') as my_file:
+# with open('files/matrix.txt', 'w') as my_file:
 #  data = json.dumps({'a': 5, 'hbj':3})
 #  my_file.write(data)
 
 
 # выведет содержимое с файла
-# with open('files/file.txt') as my_file:
+# with open('files/matrix.txt') as my_file:
  # data = json.loads(my_file.read())
  # print(data)
 
@@ -34,12 +34,12 @@
 #             matrix.append(row)
 #         return matrix
 #
-#     with open("files/matrix.json", "w") as file:
+#     with open("files/matrix.json", "w") as matrix:
 #         matrix = create_matrix(4)
-#         file.write(json.dumps({"matrix": matrix}))
+#         matrix.write(json.dumps({"matrix": matrix}))
 #
-#     with open("files/matrix.json") as file:
-#         data = json.loads(file.read())
+#     with open("files/matrix.json") as matrix:
+#         data = json.loads(matrix.read())
 #         loaded_matrix = data["matrix"]
 #
 #         for parentIndex, rows in enumerate(loaded_matrix):
