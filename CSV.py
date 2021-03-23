@@ -1,13 +1,12 @@
-
-# запись в файл
 import csv
-fields = ['firstname', 'lastname', 'group']
-rows = [
-  ['Alex', 'Varkalov', 'Z-21'],
-  ['Max', 'Ivanov', 'Z-21'],
-]
-filename = "students_info.csv"
-with open("files/csv.csv", 'w') as csvfile:
-  csvwriter = csv.writer(csvfile)
-  csvwriter.writerow(fields)
-  csvwriter.writerows(rows)
+#чтение csv файла
+with open('files/csv.csv', newline= '') as line:
+    a = csv.DictReader(line)
+    for row in a:
+        print(row['firstname'], '/',  row['group'])
+#запись в csv файл
+with open('files/csv2.csv','w', newline= '') as line:
+    b = csv.writer(line)
+    b.writerow([1, 2, 3])
+    b.writerow(['2, 3, 4'])
+    b.writerow(['3, 4, 5'])

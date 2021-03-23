@@ -35,6 +35,7 @@ class MyTime:
 def main():
     time1 = MyTime(1, 30, 30)
     time2 = MyTime(1, 70, 80)
+    print(time1 + time2)
 
 
 if __name__ == '__main__':

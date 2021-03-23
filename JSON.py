@@ -48,3 +48,11 @@
 #                     loaded_matrix[parentIndex][valueIndex] = 0
 #
 #         print(loaded_matrix)
+
+# в json перезапись с одного файла в другой
+# import json
+#
+# with open('files/matrix.json', 'r') as file:
+#     with open('files/file.json', 'w') as file2:
+#        file2.write(file.read())
+#

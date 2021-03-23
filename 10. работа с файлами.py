@@ -1,3 +1,9 @@
+#выведет определенную строку из файла
+# file = open('files/file.txt', 'r')
+# f = file.readlines()
+# print(f[2])
+
+
 
 # def main():
 # Работа с файлами
@@ -21,7 +27,7 @@
 #     matrix.close()
 
 
-# вывести:
+# вывести из матрицы:
 #     matrix = open("files/matrix.txt")
 #     lines = []
 #     while True:
@@ -60,14 +66,6 @@
 
 
     # перезапись с 1 файла во второй
-    # file_in = open("files/matrix.txt", 'r')
-    # file_out = open("files/file2.txt", 'w')
-    # file_out.write(file_in.read())
-
-
-    # 10.04 но не получилось
-    # file_in = open("files/matrix.txt")
-    # res_a = file_in.replace(0, 1)
     # file_in = open("files/matrix.txt", 'r')
     # file_out = open("files/file2.txt", 'w')
     # file_out.write(file_in.read())
